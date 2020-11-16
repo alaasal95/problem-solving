@@ -1,42 +1,21 @@
 
 
 '''
-
- EX://--->define method and when we calling this method we
-          gave it to text,and it return to us a copy from
-          the first text don't have on the second text
-          example:==> text_1="I like cats. I have one cat."
-                      text_2="cat"
-                      result="I like s. I have one."
+---->Ex://I write a program that asks the user to enter a number.
+         Then he displays the result of adding the numbers of this number.
+         Example: If the user enters the number 123, the sum of his numbers
+         will be calculated as 1 + 2 + 3, and the result will be 6 .
 
 '''
 
 
+s = 0
+n = int(input('Enter a number: '))
 
+while n != 0:
+    s += n % 10
+    print('the s=', s )
+    n = int(n / 10)
+    print('The n=',n)
 
-
-
-def count_occurrences(s1, s2):
-
-    counter = 0
-
-    for i in range(0, len(s1) ):
-        if s1[ i:i + len(s2)] == s2:
-           x=s1.replace(s1[ i:i + len(s2)],'')
-
-    print(x)
-   # return x
-
-text = input('Enter any text: ')
-keyword = input('Enter word to search occurrences: ')
-
-result = count_occurrences(text, keyword)
-
-#print("Total occurrences of '" + keyword + "' is: " + str(result))
-
-print('s=',len(text))
-
-print('s2=',len(keyword))
-
-
-
+print('The sum of the digits is: ' + str(s))

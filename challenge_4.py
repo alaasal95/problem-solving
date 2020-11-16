@@ -1,79 +1,206 @@
 
 
 '''
----->Ex://Then after the next stage, it asks you to wait for the resulting text and store it
-          in three text variables: S1, S2, and S3.
-          1. It tells him whether or not merging S1 with S2 equals S3.
-          2. It tells him if S1 is a part of S2 or equal to (i.e. S1 == s2).
-          3.If the length of S1 is greater than the length of S2, then text S2
-            text over S1 and store a new text variable named S4.
-          4.If the length of S2 is greater than the length of S1 then add the
-            text S1 on S2 and store the result in a new text variable named S4.
-          5.It tells him if S2 is a fraction of the second half of S1.
-          6.It shows the characters in the first half of S1.
 
+---->Ex://Enter two texts and it checks if the second text is in the first text or not
 '''
 
 
+def main():
+    Alaa()
+
+def Alaa():
+
+        a=list(input('enter your string='))
+        #print(type(a))
+        #print(len(a),type(a))
+        print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~```')
 
 
-s1='alaa'
-s2='salim hussain'
-s3='alaa salim hussain'
+        print('***************************')
+        print()
+        print()
+
+        Repeted(a)
+        name = input('enter your string=')
+        Ocurrenc(a,name)
+
+def Repeted(a):
+
+        i=0
+        j=1
+        while(i<len(a)-1):
+          if(a[i]!=' ' and a[j]!=' '):
+                    a[i]=a[i]+a[j]
+                    a.pop(j)
+                    # print('deleted=', a.pop(j), '(', j, ')')
+                    # print(i, '=', a[i])
+                    #
+                    # print('a=',a)
+                    # j = j + 1
+                    # print('j=',a[j],'======>>>', j)
+                    # print()
+                    # print()
+                  #else:print('----------->',j)
 
 
-print('s1:',s1)
-print('s2:',s2)
-print('s3:',s3)
+          elif(a[j]==' '):
+              a.pop(j)
+            #  print('Del@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@=', a.pop(j), '(', j, ')')
+              i=i+1   #i=1 #i=2
+              j=i+1   #j=2 #j=3
 
-print('----------------------')
-#====>1
-if(s1+' '+s2==s3):
-    print('Yes it is equal...')
-else:
-    print('No it is not equal')
+        print('--------------------------------------------------------------')
+        print('--------------------------------------------------------------')
+        print('a_Total=',a)
+        print('--------------------------------------------------------------')
+        print('--------------------------------------------------------------')
 
-print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-#====>2
-if(s1==s2):
-    print('Yes ( {} ) Similar to ( {} ) ...'.format(s1,s2))
-else:
-    print('No ( {} ) is not Similar to ( {} )...'.format(s1, s2))
 
-print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-#====>3
-s1_length=len(s1)
-s2_length=len(s2)
-s4=''
-print('s1_length:',s1_length,'  ,  ','s2_length:',s2_length)
 
-if(s1_length>s2_length):
-    s4=s2+' '+s1
-    print('the "{s1_length > s2_length}"==>s4:',s4)
-elif(s2_length>s1_length):
-    s4=s1+' '+s2
-    print('the "{s2_length > s1_length}"==>s4:',s4)
 
-print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-#====>4
-ss1='zahraa saad'
 
-ss2='ad'
-print('ss1:',ss1)
-print('ss2:',ss2)
-ss2_length=len(ss2)
-j=0
-while(j<len(ss1)):
 
-    if(ss1[j:j+ss2_length]==ss2):
-        print(ss1[j:j+ss2_length])
-    j=j+1
+def Ocurrenc(a,name):
+#name='hussain'
 
-k=0
-while(k<len(ss1)):
+        counter = 0
+        #print(len(name),type(name))
+        k=0
+        while(k<len(a)):
+             if(name==a[k]):
+                 print(a[k])
+                 counter=counter+1
 
-    if(ss1[k]!=' '):
-            print(ss1[k],',',end='')
-    else:
-        break
-    k=k+1
+             k=k+1
+        print('counter=',counter)
+
+
+
+
+if __name__ == '__main__':Alaa()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# aa=[]
+# aa=['a','b','c','x','','d','e','f','','g','h','i']
+# bb=['','','']
+#
+# # i=0
+# # j=0
+# # bb[0]=aa[0]+aa[0+1]
+# #
+# #
+# print(aa)
+# i=0
+# j=0
+# while(i<len(aa)):
+#     if(aa[i]!=''):
+#
+#         bb[j]=bb[j]+aa[i]
+#         print('bb=',bb)
+#     elif(aa[i]==''):
+#         j=j+1
+#         bb[j]=aa[i]
+#         print('bb=', bb)
+#     i=i+1
+#
+# print('bb_Total=',bb)
+
+#
+#
+#
+#
+#
+# print(True and True)#---->T
+#
+# print(True and False)#----->F
+# print(False and True)
+# print(False and False)
+#
+#
+# print('*******************')
+#
+#
+# print(True or True)
+#
+# print(True or False)
+# print(False or True)
+# print(False or False)#---->F
+#
+#
+
+
+
+#----->2
+# a=['a','b','c','d']
+# a[0]=a[0]+a[1]
+# print(a)
+# a.pop(1)
+# print(a)
+#
+#
+#
+#
+
+
+
+#------>1
+# a=[]
+# a=input('enter your string=')
+# print(len(a))
+# i=0
+# while(i<len(a)):
+#     if(a[i]==' '):
+#         print(i, '=', '#')
+#     else:
+#
+#         print(i, '=', a[i])
+#
+#     i = i + 1
+#
+#
+
+
+
+
+#
+# #a=['a','b','c','#','d','e','f','#','h','i','j']
+# a=['a','l','a','a','#','s','a','l','i','m','#','h','u','s','s','a','i','n']
+# print(a)
+# print(len(a))
+# print('after=',len(a))
+
+
+
+
+
+
+
+# # s هنا قمنا بتعريف متغير نصي إسمه
+# s = "Hello, my name is Mhamad. I'm a full my stack developer."
+# # s في النص الموجود في المتغير 'a' هنا قمنا بطباعة كم مرة يوجد النص
+# print(s.count('my'))
+
+
