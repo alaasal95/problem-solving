@@ -2,55 +2,41 @@
 
 '''
 
------->EX:// Introduce a function called Count Words, when you call it we pass a text to it,
-             and it returns the number of words in that text.Then try this function in the program.
-
-Example: If she uses a role in CountWords () in the text "Easy-to-Learn Programming."
-         Apple will return the number 5.
+ EX://--->define method and when we calling this method we
+          gave it to text,and it return to us a copy from
+          the first text don't have on the second text
+          example:==> text_1="I like cats. I have one cat."
+                      text_2="cat"
+                      result="I like s. I have one."
 
 '''
 
 
 
-#t1='Programming is easy to learn.'
-
-def CountWords(t1):
-
-        length=len(t1)
-        print('length:',length)
-        print('==================================')
-        i=0
-        counter=0
-        x=-1
-        while(i<len(t1)):
-           # print('i:',i,'====>>>',t1[i])
-            if(t1[i]==' '):
-               # print('t1-->',t1[i])
-                counter=counter+1
-
-            elif(i==length-1):
-              #  print(t1[i],'t1=***>',t1[-1])
-                counter=counter+1
-            i=i+1
-
-        print('counter:',counter)
 
 
 
-tex=input('enter your text:')
-sed_all=CountWords(tex)
+def count_occurrences(s1, s2):
+
+    counter = 0
+
+    for i in range(0, len(s1) ):
+        if s1[ i:i + len(s2)] == s2:
+           x=s1.replace(s1[ i:i + len(s2)],'')
+
+    print(x)
+   # return x
+
+text = input('Enter any text: ')
+keyword = input('Enter word to search occurrences: ')
+
+result = count_occurrences(text, keyword)
+
+#print("Total occurrences of '" + keyword + "' is: " + str(result))
+
+print('s=',len(text))
+
+print('s2=',len(keyword))
 
 
-#######################################################
 
-#
-# last=t1[length-1]
-# i=0
-# while(i<len(t1)):
-#     if(i==length-1):
-#         print(i,'=',last)
-#
-#
-#     i=i+1
-
-#######################################################
